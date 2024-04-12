@@ -187,19 +187,9 @@ header {
 
 .section2 {
     position: relative; 
-    display: inline-block; 
+    display: flex; 
     margin-left: 100px;
-    
-}
-
-.detail {
-    position: absolute; 
-    top: 0; 
-    right: 0; 
-    padding: 20px 20px;
-    border-radius: 0 10px 0 0 ;
-    border-style: none;
-    color: #fff;
+    align-items: center;
 }
 
 .detail a{
@@ -207,4 +197,71 @@ header {
     color: #000;
     font-size:16px;
 
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+.title {
+    text-align: center;
+}
+  
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+  
+.col {
+    flex-basis: calc(33% - 20px);
+    margin-bottom: 20px; 
+}
+  
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 450px;
+}
+  
+.card img {
+    width: 100%;
+    height: auto;
+}
+  
+.card-body {
+    padding: 20px;
+}
+  
+.card-body h3 {
+    margin-top: 0;
+    text-align: center;
+    color: #14364B;
+}
+  
+.card-body p {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+  
+.card-body button {
+    align-self: flex-end;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #14364B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  
+}
+  
+.card-body button:hover {
+    background-color:#326789;
+    ;
 }
