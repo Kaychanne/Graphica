@@ -330,18 +330,6 @@ textarea {
     margin-bottom: 10px;
 }
 
-.header1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.subtitle1 {
-    font-size: 18px;
-    margin: 0;
-    color: #666;
-}
-
 .projects {
     display: flex;
     justify-content: center;
