@@ -195,6 +195,12 @@ header {
     /* background-color: #fff ; */
 }
 
+.sectionn {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .detail a{
     text-decoration: none;
     color: #000;
@@ -342,8 +348,7 @@ textarea {
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    width: 400px;
-    height: 400px;
+    width: 200px;
 }
 
 .project:hover {
