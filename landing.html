@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphica Lab</title>
     <link rel="stylesheet" type="text/css" href="view/css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,12 +27,50 @@
         <section class="second">
             <p class="slogan">Membangun Bersama untuk <br> Masa Depan Kreatif</p>
             <p class="quotes">Memberikan Layanan Desain Berkualitas kepada Klien Sambil Membangun <br> Lingkungan bagi Desainer untuk Berkembang dan Berkolaborasi. <br>
-                Komitmen kami adalah ganda: menyediakan layanan desain terbaik kepada klien <br> kami dan membudayakan ruang kerja yang merawat pertumbuhan dan  <br> kolaborasi para desainer. Kami percaya bahwa dengan memberikan desain yang<br> luar biasa dan membangun lingkungan yang mendukung, kita dapat mencapai <br>keunggulan bersama.</p>
+              Menyediakan layanan desain terbaik kepada klien <br> kami dan membudayakan ruang kerja yang merawat pertumbuhan dan  <br> kolaborasi para desainer.</p>
             <button class="start"><a href="login.html">Get Started</a></button>
             <img src="view/assets/Vector 1.png" alt="image" class="foto">
         </section>
     </header>
     <article>
+      <div class="section2">
+        <img src="view/assets/Rectangle 48.png" > 
+        <div class="container">
+          <h1 class="title">Layanan Kami</h1>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <img src="https://via.placeholder.com/200" alt="Album 1">
+                <div class="card-body">
+                  <h3>Desain Logo</h3>
+                  <p>Buat Logo sebagai langkah awal membuat identitas brand sebuah bisnis agar mudah dikenali oleh calon customer.</p>
+                  <button>View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://via.placeholder.com/200" alt="Album 2">
+                <div class="card-body">
+                  <h3>Desain Branding Kit</h3>
+                  <p>Pembuatan konsep desain untuk segala macam keperluan branding bisnis secara offline.</p>
+                  <button>View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://via.placeholder.com/200" alt="Album 3">
+                <div class="card-body">
+                  <h3>Desain Kartu Nama</h3>
+                  <p>Pembuatan desain kartu nama sebagai personal branding yang eksklusif dan profesional.</p>
+                  <button>View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
         <div class="section">
             <p class="header1">MENGAPA HARUS KAMI?</p>
             <p class="subtitle1">Keuntungan Jasa Desain dari Graphica Lab</p>
@@ -67,44 +106,34 @@
                 <div class="subtitle">Dapatkan juga file master design untuk keperluan cetak dengan ukuran besar dan memudahkan perubahan desain.</div>
               </div>
         </div>
-        <div class="section2">
-          <img src="view/assets/Rectangle 48.png" > 
-          <div class="container">
-            <h1 class="title">Layanan Kami</h1>
-            <div class="row">
-              <div class="col">
-                <div class="card">
-                  <img src="https://via.placeholder.com/200" alt="Album 1">
-                  <div class="card-body">
-                    <h3>Desain Logo</h3>
-                    <p>Buat Logo sebagai langkah awal membuat identitas brand sebuah bisnis agar mudah dikenali oleh calon customer.</p>
-                    <button>View Details</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="https://via.placeholder.com/200" alt="Album 2">
-                  <div class="card-body">
-                    <h3>Desain Branding Kit</h3>
-                    <p>Pembuatan konsep desain untuk segala macam keperluan branding bisnis secara offline.</p>
-                    <button>View Details</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="https://via.placeholder.com/200" alt="Album 3">
-                  <div class="card-body">
-                    <h3>Desain Kartu Nama</h3>
-                    <p>Pembuatan desain kartu nama sebagai personal branding yang eksklusif dan profesional.</p>
-                    <button>View Details</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <section class="section ">
+          <p class="header1">KARYA TERBARU KAMI?</p>
+          <p class="subtitle1">Portofolio</p>
+          <div class="projects">
+            <div class="project" onclick="showDetails(0)">
+              <img src="view/assets/project1.png" alt="Project 1">
           </div>
-        </div>        
+          <div class="project" onclick="showDetails(1)">
+              <img src="view/assets/project2.png" alt="Project 2">
+          </div>
+        </div>
+        </section>
+        <div class="modal" id="projectModal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="modalImage">
+          <div id="projectDetails" class="project-details">
+            <h2 id="projectTitle"></h2>
+            <p id="projectDescription"></p>
+            <div class="actions">
+              <button onclick="like()"><i class="fas fa-thumbs-up"></i></button>
+              <div id="likeCount">0 likes</div>
+              <textarea id="comment" placeholder="Add a comment"></textarea>
+                  <button onclick="comment()">Comment</button>
+                  <div id="comments"></div>
+              </div>
+          </div>
+        </div>
     </article>
+    <script src="view/javascript/landing.js"></script>
 </body>
 </html>
