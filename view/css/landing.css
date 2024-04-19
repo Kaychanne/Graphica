@@ -99,7 +99,8 @@ header {
     right: 0;
     position: absolute;
     top: 0;
-    margin-top: 140px;
+    margin-top: 120px;
+    width: 500px;
 }
 .slogan {
     font-size: 64px;
@@ -107,7 +108,7 @@ header {
 }
 
 .quotes {
-    margin-top: 26px;
+    margin-top: 16px;
     font-size: 16px;
     font-weight: 400;
 }
@@ -285,7 +286,13 @@ header {
     border-radius: 5px;
     cursor: pointer;
 }
-  
+
+.card-body button a{
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 13px;
+}
+
 .card-body button:hover {
     background-color:#326789;
 }
