@@ -71,39 +71,28 @@
           </div>
         </div>
       </div>
-      <section class="section ">
+      <section class="section">
         <p class="header1">KARYA TERBARU KAMI?</p>
         <p class="subtitle1">Portofolio</p>
         <div class="projects">
-          <div class="project" onclick="showDetails(0)">
-            <img src="view/assets/project1.png" alt="Project 1">
-        </div>
-        <div class="project" onclick="showDetails(1)">
-            <img src="view/assets/project2.png" alt="Project 2">
-        </div>
-        <div class="project" onclick="showDetails(0)">
-          <img src="view/assets/project1.png" alt="Project 1">
-        </div>
-        <div class="project" onclick="showDetails(1)">
-          <img src="view/assets/project2.png" alt="Project 2">
-        </div>
-      </div>
-      </section>
-      <div class="modal" id="projectModal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="projectDetails" class="project-details">
-          <h2 id="projectTitle"></h2>
-          <p id="projectDescription"></p>
-          <div class="actions">
-            <button onclick="like()"><i class="fas fa-thumbs-up"></i></button>
-            <div id="likeCount">0 likes</div>
-            <textarea id="comment" placeholder="Add a comment"></textarea>
-                <button onclick="comment()">Comment</button>
-                <div id="comments"></div>
+            <div class="project" onclick="showDetails(0)">
+                <img src="view/assets/project1.png" alt="Project 1">
+            </div>
+            <div class="project" onclick="showDetails(1)">
+                <img src="view/assets/project2.png" alt="Project 2">
             </div>
         </div>
+    </section>
+    <div class="modal" id="projectModal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <button class="prev" onclick="prevProject()">&#10094;</button>
+      <button class="next" onclick="nextProject()">&#10095;</button>
+      <img class="modal-content" id="modalImage">
+      <div id="projectDetails" class="project-details">
+        <h2 id="projectTitle"></h2>
+        <p id="projectDescription"></p>
       </div>
+    </div>
       <div class="section">
         <p class="header1">MENGAPA HARUS KAMI?</p>
         <p class="subtitle1">Keuntungan Jasa Desain dari Graphica Lab</p>

@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #14364B;
+    --secondary-color: #326789;
+    --background-color: #F8F8F8;
+    --text-color: #14364B;
+    --white-color: #fff;
+    --light-gray-color: #666;
+    --dark-gray-color: #ddd;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +16,12 @@
 
 body {
     font-family:'Heebo', sans-serif;
-    background-color: #F8F8F8;
+    background-color: var(--background-color);
 }
 
 header {
-    background-color: #fff;
-    color: #14364B;
+    background-color: var(--white-color);
+    color: var(--text-color);
     padding: 20px 20px;
     justify-content: space-between;
     align-items:  center; 
@@ -36,16 +46,16 @@ header {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #14364B;
+    color: var(--text-color);
     font-weight: 700;
 }
 
 .navbar ul li a:hover {
-    color: #326789;
+    color: var(--secondary-color);
 }
 
 .user .register {
-    color: #14364B;
+    color: var(--text-color);
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -56,7 +66,7 @@ header {
 }
 
 .user .login {
-    background-color: #14364B;
+    background-color: var(--text-color);
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -68,21 +78,21 @@ header {
 
 .user .login a{
     text-decoration: none;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .user .login:hover{
-    background-color: #326789;
+    background-color: var(--secondary-color);
 }
 
 .user .register:hover {
-    color: #326789;
+    color: var(--secondary-color);
 }
 
 .second {
     margin-top: 100px;
     margin-left: 100px;
-    color: #14364B;
+    color: var(--text-color);
 }
 
 .foto{
@@ -103,7 +113,7 @@ header {
 }
 
 .start {
-    background-color: #14364B;
+    background-color: var(--text-color);
     text-decoration: none;
     border: none;
     width: 122px;
@@ -119,25 +129,25 @@ header {
 
 .start a{
     text-decoration: none;
-    color: #fff;
+    color: var(--white-color);
     font-size: 16px;
 }
 
 .start:hover {
-    background-color: #326789;
+    background-color: var(--secondary-color);
 }
 
 .section{
     text-align: center;
     margin: 0 auto;
-    background-color: #fff ;
+    background-color: var(--white-color) ;
     padding: 10px;
 }
 
 .header1{
     font-size: 24px;
     font-weight: 500;
-    color: #14364B;
+    color: var(--text-color);
     margin-top: 40px;
 }
 
@@ -145,7 +155,7 @@ header {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 40px;
-    color: #14364B;
+    color: var(--text-color);
 }
 .column {
     text-align: center;
@@ -192,7 +202,7 @@ header {
     display: flex; 
     margin-left: 100px;
     align-items: center;
-    /* background-color: #fff ; */
+    /* background-color: var(--white-color) ; */
 }
 
 .sectionn {
@@ -215,7 +225,7 @@ header {
   
 .title {
     text-align: center;
-    color: #14364B;
+    color: var(--text-color);
     font-size: 24px;
 }
   
@@ -256,7 +266,7 @@ header {
 .card-body h3 {
     margin-top: 0;
     text-align: center;
-    color: #14364B;
+    color: var(--text-color);
 }
   
 .card-body p {
@@ -269,8 +279,8 @@ header {
     align-self: flex-end;
     width: 100%;
     padding: 10px 0;
-    background-color: #14364B;
-    color: #fff;
+    background-color: var(--text-color);
+    color: var(--white-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -305,12 +315,12 @@ header {
 .modal-content img {
     width: 100%; 
     height: 100%; 
-    object-fit: cover; 
+    /* object-fit: cover;  */
     
 }
 
 .close {
-    color: #fff;
+    color: var(--white-color);
     position: absolute;
     top: 10px;
     right: 25px;
@@ -320,7 +330,7 @@ header {
 }
 
 .project-details {
-    color: #fff;
+    color: var(--white-color);
     text-align: center;
     margin-top: 20px;
     
@@ -328,6 +338,33 @@ header {
 
 .actions {
     margin-top: 20px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 textarea {
