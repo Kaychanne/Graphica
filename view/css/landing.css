@@ -439,39 +439,39 @@ textarea {
 footer {
     background-color: var(--background-color);
     padding: 20px 0;
-  }
+}
   
-  .footer-container {
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
-  }
+}
   
   .footer-section {
     text-align: center;
   }
   
-  .footer-section h3 {
+.footer-section h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-  }
+}
   
-  .social-links {
+.social-links {
     list-style-type: none;
     padding: 0;
-  }
+}
   
-  .social-links li {
+.social-links li {
     display: inline-block;
     margin-right: 10px;
-  }
+}
   
-  .social-links li a {
+.social-links li a {
     color: var(--primary-color);
     font-size: 24px;
-  }
+}
   
-  .social-links li a:hover {
+.social-links li a:hover {
     color:var(--secondary-color);
-  }
+}
   
   
