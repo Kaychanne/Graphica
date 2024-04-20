@@ -3,157 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphica Lab</title>
-    <link rel="stylesheet" type="text/css" href="view/css/landing.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>UTS</title>
 </head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+    }
+    .navbar{
+        width: 100%;
+        height: 50px;
+    }
+     .kanan{
+        float: right;
+        padding: 15px 0;
+    }
+    .kiri{
+        float: left;
+        padding: 15px 0;
+    }
+    a{
+        text-decoration: none;
+        margin: 0 15px;
+        color: black;
+        font-weight: 550;
+    }
+    a:hover{
+        color: grey;
+    }
+    .orangbaik{
+        display: flex;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        justify-content: space-around;
+        
+}
+    .kotak{
+        width: 300px ;
+        height: 120px;
+        border-radius: 10px;
+        background-color: #F6F6F6;
+        padding: 150px 0;
+        color: #326789;
+        padding-bottom: 40px;
+    }
+
+        
+
+    button{
+        width: 150px;
+        height: 40px;
+        border: 1px solid;
+        border-radius: 10px;
+    }
+    .artikelnya{
+        width: 100%;
+        text-align: center;
+        font-size:x-large;
+        margin-top:20px;
+    }
+</style>
 <body>
-    <header>
+    <div>
         <div class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="artikel.html">Artikel</a></li>
-                <li><a href="portofolio.html">Portofolio</a></li>
-                <li><a href="layanan.html">Layanan</a></li>
-                <li><a href="about.html">Tentang Kami</a></li>
-                <li><a href="#Contact">Kontak</a></li>
-            </ul>
-            <div class="user">
-            <a href="register.html" class="register">Register</a>
-            <button class="login"><a href="login.html">Login</a></button>
+            <div class="kanan">
+                <a href="">Register</a>
+                <a href="" style="border: 1px; padding: 8px 15px; border-radius: 10px; color: white; outline: none; background-color: #326789;">Login</a>
+            </div>
+            <div class="kiri">
+                <a href="" class="active">Home</a>
+                <a href="">Artikel</a>
+                <a href="">Portofolio</a>
+                <a href="">Layanan</a>
+                <a href="">Tentang kami</a>
+                <a href="">Kontak</a>
+            </div>
         </div>
+
+        <div class="artikelnya">
+            <p style="font-weight: 550; padding-top: 20px; padding-bottom: 30px; ">Artikel</p>
+        </div>
+        <div class="orangbaik">   
+            <div class="kotak">
+                    <p style="font-weight: 550;" >Apa itu Desain Grafis? </p>
+                    <p style="font-size: 12px; line-height: 17px;"><br>Di dalam artikel ini anda akan <br> mengenal desain grafis lebih dalam <br> mulai dari dasar hingga contoh- <br> contohnya. <br> </p>
+                    <p style="font-size: 11px; line-height: 17px;"><br> Baca lebih lanjut
+            </div>
+            <div class="kotak">
+                <p style="font-weight: 550;" >Apa itu Desain Grafis? </p>
+                <p style="font-size: 12px; line-height: 17px;"><br>Di dalam artikel ini anda akan <br> mengenal desain grafis lebih dalam <br> mulai dari dasar hingga contoh- <br> contohnya. <br> </p>
+                <p style="font-size: 11px; line-height: 17px;"><br> Baca lebih lanjut
+            </div>
+            <div class="kotak">
+                    <p style="font-weight: 550;" >Apa itu Desain Grafis? </p>
+                    <p style="font-size: 12px; line-height: 17px;"><br>Di dalam artikel ini anda akan <br> mengenal desain grafis lebih dalam <br> mulai dari dasar hingga contoh- <br> contohnya. <br> </p>
+                    <p style="font-size: 11px; line-height: 17px;"><br> Baca lebih lanjut
+            </div>
+        </div>
+        
     </div>
-        <section class="second">
-            <p class="slogan">Kreativitas <br> Layanan Terpercaya</p>
-            <p class="quotes">Memberikan Layanan Desain Berkualitas kepada Klien <br> Sambil Membangun Lingkungan Kolaboratif  untuk Pertumbuhan Desainer.</p>
-            <button class="start"><a href="login.html">Mari Mulai</a></button>
-            <img src="view/assets/Vector 1.png" alt="image" class="foto">
-        </section>
-    </header>
-    <article>
-      <div class="section2">
-        <img src="view/assets/Rectangle 48.png" > 
-        <div class="container">
-          <h1 class="title">Layanan Kami</h1>
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Album 1">
-                <div class="card-body">
-                  <h3>Desain Logo</h3>
-                  <p>Buat Logo sebagai langkah awal membuat identitas brand sebuah bisnis agar mudah dikenali oleh calon customer.</p>
-                  <button><a href="#">Detailnya</a></button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Album 2">
-                <div class="card-body">
-                  <h3>Desain Branding Kit</h3>
-                  <p>Pembuatan konsep desain untuk segala macam keperluan branding bisnis secara offline.</p>
-                  <button><a href="#">Detailnya</a></button>
-                </div>
-              </div>
-              <div class="detail">
-                <button><a href="layanan.html">Lihat Selengkapnya</a></button>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Album 3">
-                <div class="card-body">
-                  <h3>Desain Kartu Nama</h3>
-                  <p>Pembuatan desain kartu nama sebagai personal branding yang eksklusif dan profesional.</p>
-                  <button><a href="#">Detailnya</a></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="section">
-        <p class="header1">KARYA TERBARU KAMI?</p>
-        <p class="subtitle1">Portofolio</p>
-        <div class="projects">
-            <div class="project" onclick="showDetails(0)">
-                <img src="view/assets/project1.png" alt="Project 1">
-            </div>
-            <div class="project" onclick="showDetails(1)">
-                <img src="view/assets/project2.png" alt="Project 2">
-            </div>
-            <div class="project" onclick="showDetails(2)">
-              <img src="view/assets/project3.png" alt="Project 3">
-            </div>
-            <div class="project" onclick="showDetails(3)">
-              <img src="view/assets/project4.png" alt="Project 2">
-            </div>
-            <div class="project" onclick="showDetails(4)">
-              <img src="view/assets/project5.png" alt="Project 1">
-            </div>
-        </div>
-        <div class="detail">
-          <button><a href="portofolio.html">Lihat Selengkapnya</a></button>
-        </div>
-    </section>
-    <div class="modal" id="projectModal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <button class="prev" onclick="prevProject()">&#10094;</button>
-      <button class="next" onclick="nextProject()">&#10095;</button>
-      <img class="modal-content" id="modalImage">
-      <div id="projectDetails" class="project-details">
-        <h2 id="projectTitle"></h2>
-        <p id="projectDescription"></p>
-      </div>
-    </div>
-      <div class="sectionn">
-        <p class="header1">MENGAPA HARUS KAMI?</p>
-        <p class="subtitle1">Keuntungan Jasa Desain dari Graphica Lab</p>
-        <div class="column">
-          <div class="icon"><img src="view/assets/mdi_design.png" alt="desain terkini"></div>
-          <div class="title">Desain Terkini</div>
-          <div class="subtitle">Graphica Lab selalu mengikuti trend terkini dengan desain yang profesional & persuasif.</div>
-        </div>
-        <div class="column">
-          <div class="icon"><img src="view/assets/mingcute_time-fill.png" alt="hemat waktu & biaya"></div>
-          <div class="title">Hemat Waktu & Biaya</div>
-          <div class="subtitle">Tidak perlu membuang waktu & biaya untuk merekrut creative designer serta menyediakan peralatan yang mahal.</div>
-        </div>
-        <div class="column">
-          <div class="icon"><img src="view/assets/tabler_triangle-filled.png" alt="desain berbakat"></div>
-          <div class="title">Desainer Berbakat</div>
-          <div class="subtitle">Dikerjakan oleh tim desainer kami, tidak perlu pusing untuk mengelola tim desainer sendiri.</div>
-        </div>
-        <div class="clearfix"></div>
-        <div class="column bottom-column">
-          <div class="icon"><img src="view/assets/gg_if-design.png" alt="hasil original"></div>
-          <div class="title">Hasil Original</div>
-          <div class="subtitle">Hasil desain dijamin original bukan plagiarisme, lisensi dan hak cipta sepenuhnya diserahkan kepada klien.</div>
-        </div>
-        <div class="column bottom-column">
-          <div class="icon"><img src="view/assets/ant-design_smile-filled.png" alt="pelayanan profesional"></div>
-          <div class="title">Pelayanan Profesional</div>
-          <div class="subtitle">Graphica Lab memberikan layanan pelangggan ramah dan responsif</div>
-        </div>
-        <div class="column bottom-column">
-          <div class="icon"><img src="view/assets/solar_file-bold.png" alt="file master"></div>
-          <div class="title">File Master Lengkap</div>
-          <div class="subtitle">Dapatkan juga file master design untuk keperluan cetak dengan ukuran besar dan memudahkan perubahan desain.</div>
-        </div>
-      </div>
-      <footer id="Contact">
-        <div class="footer-container">
-          <div class="footer-section">
-            <h3 style="color: #14364B;">Hubungi Kami</h3>
-            <ul class="social-links">
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </footer>      
-    </article>
-    <script src="view/javascript/landing.js"></script>
 </body>
 </html>
