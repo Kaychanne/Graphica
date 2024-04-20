@@ -13,6 +13,27 @@ let projectsData = [
         description: 'Description of Project 2',
         likeCount: 0,
         comments: []
+    },
+    {
+        id: 2,
+        title: 'Project 3',
+        description: 'Description of Project 3',
+        likeCount: 0,
+        comments: []
+    },
+    {
+        id: 3,
+        title: 'Project 4',
+        description: 'Description of Project 4',
+        likeCount: 0,
+        comments: []
+    },
+    {
+        id: 4,
+        title: 'Project 5',
+        description: 'Description of Project 5',
+        likeCount: 0,
+        comments: []
     }
 ];
 webkitURL
@@ -69,3 +90,4 @@ function showDetails(projectId) {
 
     modal.style.display = 'block';
 }
+
