@@ -92,6 +92,7 @@ header {
     padding: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    position: relative;
 }
 
 .kotak p {
@@ -119,4 +120,84 @@ header {
     font-size: larger;
     font-weight: bold;
     color: var(--primary-color);
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.read-more {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.more-content {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.more-content.active {
+    opacity: 1;
+}
+.more-content {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #999;
+}
+
+footer {
+    background-color: var(--background-color);
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+  
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.footer-section {
+    text-align: center;
+}
+  
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+  
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+  
+.social-links li a {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+  
+.social-links li a:hover {
+    color:var(--secondary-color);
 }
