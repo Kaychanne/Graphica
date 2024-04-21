@@ -24,50 +24,45 @@ header {
     color: var(--text-color);
     padding: 20px 20px;
     justify-content: space-between;
-    align-items: center; 
+    align-items:  center; 
 }
-
 .navbar {
     display: flex;
     justify-content: space-between; 
-    padding: 20px;
-    margin: 0;
+    margin: 0 100px;
+    padding: 20px 0;
     align-items: center;
-    background-color: var(--white-color);
 }
 
 .navbar ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    /* margin-left: 100px; */
+    /* align-items: center; */
 }
 
 .navbar ul li {
-    margin-right: 20px;
-}
-
-.navbar ul li:last-child {
-    margin-right: 0;
+    display: inline-block;
+    margin-right: 60px;
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 700;
-    font-size: 14px;
+}
+
+.navbar ul li a:hover {
+    color: var(--secondary-color);
 }
 
 .navbar ul li img {
-    height: 40px;
-    width: auto;
-    margin-right: 20px;
+    vertical-align: middle; 
 }
 
 .second {
     margin-top: 90px;
     margin-bottom: 90px;
-    margin-left: 20px;
+    margin-left: 100px;
     color: var(--text-color);
 }
 
@@ -76,10 +71,9 @@ header {
     position: absolute;
     top: 0;
     margin-top: 150px;
-    width: 100%;
-    margin-right: 20px;
+    width: 300px;
+    margin-right: 100px;
 }
-
 .slogan {
     font-size: 64px;
     font-weight: 600;
@@ -136,7 +130,6 @@ header {
     margin-bottom: 40px;
     color: var(--text-color);
 }
-
 .column {
     text-align: center;
     padding: 20px;
@@ -148,7 +141,8 @@ header {
     margin-right: auto;
     justify-content: center;
     float: none;
-}
+ }
+
 
 .icon {
     font-size: 48px;
@@ -179,8 +173,9 @@ header {
 .section2 {
     position: relative; 
     display: flex; 
-    margin-left: 20px;
+    margin-left: 100px;
     align-items: center;
+    /* background-color: var(--white-color) ; */
 }
 
 .sectionn {
@@ -199,26 +194,26 @@ header {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
-
+  }
+  
 .title {
     text-align: center;
     color: var(--text-color);
     font-size: 24px;
 }
-
+  
 .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; 
     margin-top: 20px;
 }
-
+  
 .col {
     flex-basis: calc(33% - 20px);
     margin-bottom: 20px; 
 }
-
+  
 .card {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -227,12 +222,12 @@ header {
     display: flex;
     flex-direction: column;
 }
-
+  
 .card img {
     width: 100%;
     height: auto;
 }
-
+  
 .card-body {
     padding: 20px;
     flex: 1;
@@ -240,18 +235,19 @@ header {
     flex-direction: column;
     justify-content: space-between;
 }
-
+  
 .card-body h3 {
     margin-top: 0;
     text-align: center;
     color: var(--text-color);
 }
-
+  
 .card-body p {
     margin-bottom: 10px;
     text-align: center;
     font-size: 14px;
 }
+
 
 .card-body button {
     align-self: flex-end;
@@ -325,6 +321,8 @@ header {
 .modal-content img {
     width: 100%; 
     height: 100%; 
+    /* object-fit: cover;  */
+    
 }
 
 .close {
@@ -341,6 +339,7 @@ header {
     color: var(--white-color);
     text-align: center;
     margin-top: 20px;
+    
 }
 
 .actions {
@@ -413,62 +412,38 @@ footer {
     background-color: var(--background-color);
     padding: 20px 0;
 }
-
+  
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-.footer-section {
+  
+  .footer-section {
     text-align: center;
-}
-
+  }
+  
 .footer-section h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
-
+  
 .social-links {
     list-style-type: none;
     padding: 0;
 }
-
+  
 .social-links li {
     display: inline-block;
     margin-right: 10px;
 }
-
+  
 .social-links li a {
     color: var(--primary-color);
     font-size: 24px;
 }
-
+  
 .social-links li a:hover {
     color:var(--secondary-color);
 }
-
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; 
-        align-items: flex-start; 
-        padding: 10px; 
-    }
-
-    .navbar ul {
-        margin-top: 10px; 
-    }
-
-    .navbar ul li {
-        margin-right: 0; 
-        margin-bottom: 10px; 
-    }
-
-    .navbar ul li img {
-        margin-right: 0;
-    }
-
-    .navbar ul li:last-child {
-        margin-bottom: 0; 
-    }
-}
+  
+  
