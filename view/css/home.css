@@ -54,41 +54,6 @@ header {
     color: var(--secondary-color);
 }
 
-.user .register {
-    color: var(--text-color);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 20px;
-    font-weight: 700;
-}
-
-.user .login {
-    background-color: var(--text-color);
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.user .login a{
-    text-decoration: none;
-    color: var(--white-color);
-}
-
-.user .login:hover{
-    background-color: var(--secondary-color);
-}
-
-.user .register:hover {
-    color: var(--secondary-color);
-}
-
 .second {
     margin-top: 90px;
     margin-bottom: 90px;
