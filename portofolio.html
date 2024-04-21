@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphica Lab</title>
+    <link rel="stylesheet" type="text/css" href="view/css/portofolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="#">Portofolio</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="#Contact">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+      <section class="section">
+        <p class="header1">KARYA TERBARU KAMI?</p>
+        <p class="subtitle1">Portofolio</p>
+        <div class="projects">
+            <div class="project" onclick="showDetails(0)">
+                <img src="view/assets/project1.png" alt="Project 1">
+            </div>
+            <div class="project" onclick="showDetails(1)">
+                <img src="view/assets/project2.png" alt="Project 2">
+            </div>
+            <div class="project" onclick="showDetails(2)">
+              <img src="view/assets/project3.png" alt="Project 3">
+            </div>
+            <div class="project" onclick="showDetails(3)">
+              <img src="view/assets/project4.png" alt="Project 2">
+            </div>
+            <div class="project" onclick="showDetails(4)">
+              <img src="view/assets/project5.png" alt="Project 1">
+            </div>
+        </div>
+    </section>
+    <div class="modal" id="projectModal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <button class="prev" onclick="prevProject()">&#10094;</button>
+      <button class="next" onclick="nextProject()">&#10095;</button>
+      <img class="modal-content" id="modalImage">
+      <div id="projectDetails" class="project-details">
+        <h2 id="projectTitle"></h2>
+        <p id="projectDescription"></p>
+      </div>
+    </div>    
+    </article>
+    <script src="view/javascript/landing.js"></script>
+</body>
+</html>

@@ -56,37 +56,37 @@ function closeModal() {
     modal.style.display = 'none';
 }
 function nextProject() {
-    currentProjectIndex = (currentProjectIndex + 1) % projectsData.length;
+    currentProject = (currentProject + 1) % projectsData.length;
     const image = document.getElementById('modalImage');
     const title = document.getElementById('projectTitle');
     const description = document.getElementById('projectDescription');
 
-    image.src = `view/assets/project${projectsData[currentProjectIndex].id + 1}.png`;
-    title.textContent = projectsData[currentProjectIndex].title;
-    description.textContent = projectsData[currentProjectIndex].description;
+    image.src = `view/assets/project${projectsData[currentProject].id + 1}.png`;
+    title.textContent = projectsData[currentProject].title;
+    description.textContent = projectsData[currentProject].description;
 }
 
 function prevProject() {
-    currentProjectIndex = (currentProjectIndex - 1 + projectsData.length) % projectsData.length;
+    currentProject = (currentProject - 1 + projectsData.length) % projectsData.length;
     const image = document.getElementById('modalImage');
     const title = document.getElementById('projectTitle');
     const description = document.getElementById('projectDescription');
 
-    image.src = `view/assets/project${projectsData[currentProjectIndex].id + 1}.png`;
-    title.textContent = projectsData[currentProjectIndex].title;
-    description.textContent = projectsData[currentProjectIndex].description;
+    image.src = `view/assets/project${projectsData[currentProject].id + 1}.png`;
+    title.textContent = projectsData[currentProject].title;
+    description.textContent = projectsData[currentProject].description;
 }
 
 function showDetails(projectId) {
-    currentProjectIndex = projectId;
+    currentProject = projectId;
     const modal = document.getElementById('projectModal');
     const image = document.getElementById('modalImage');
     const title = document.getElementById('projectTitle');
     const description = document.getElementById('projectDescription');
 
-    image.src = `view/assets/project${projectsData[currentProjectIndex].id + 1}.png`;
-    title.textContent = projectsData[currentProjectIndex].title;
-    description.textContent = projectsData[currentProjectIndex].description;
+    image.src = `view/assets/project${projectsData[currentProject].id + 1}.png`;
+    title.textContent = projectsData[currentProject].title;
+    description.textContent = projectsData[currentProject].description;
 
     modal.style.display = 'block';
 }
