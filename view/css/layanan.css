@@ -17,6 +17,7 @@
 body {
     font-family:'Heebo', sans-serif;
     background-color: var(--background-color);
+    color: var(--secondary-color);
 }
 
 header {
@@ -96,13 +97,12 @@ header {
 }
 
 .card {
-    border: 1px solid #ddd;
     border-radius: 5px;
     background-color: var(--background-color);
-    overflow: hidden;
-    height: 450px;
+    height: 485px;
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
 .card img {
@@ -121,7 +121,7 @@ header {
 .card-body h3 {
     margin-top: 0;
     text-align: center;
-    color: var(--text-color);
+    color: var(--secondary-color);
 }
 
 .card-body p {
