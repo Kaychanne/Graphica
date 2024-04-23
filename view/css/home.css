@@ -26,17 +26,18 @@ header {
     justify-content: space-between;
     align-items:  center; 
 }
-
 .navbar {
     display: flex;
     justify-content: space-between; 
     margin: 0 100px;
     padding: 20px 0;
+    align-items: center;
 }
 
 .navbar ul {
     list-style-type: none;
     /* margin-left: 100px; */
+    /* align-items: center; */
 }
 
 .navbar ul li {
@@ -52,6 +53,10 @@ header {
 
 .navbar ul li a:hover {
     color: var(--secondary-color);
+}
+
+.navbar ul li img {
+    vertical-align: middle; 
 }
 
 .second {
