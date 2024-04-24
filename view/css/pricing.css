@@ -16,8 +16,7 @@
 
 body {
     font-family:'Heebo', sans-serif;
-    /* background-color: var(--background-color); */
-    color: var(--secondary-color);
+    background-color: var(--white-color);
 }
 
 header {
@@ -64,8 +63,9 @@ header {
 .section2 {
     position: relative; 
     display: flex; 
+    margin-left: 100px;
     align-items: center;
-    background-color: var(--white-color) ; 
+    /* background-color: var(--white-color) ; */
     flex-wrap: wrap;
 }
 
@@ -73,47 +73,33 @@ header {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.judul1 {
-    font-size: 16px;
-    font-weight: 600;
+  }
+  
+.title {
     text-align: center;
     color: var(--text-color);
+    font-size: 24px;
 }
-
-.judul2 {
-    margin-top: 16px;
-    font-size: 32px;
-    font-weight: 400;
-    text-align: center;
-    color: var(--text-color);
-}
-
+  
 .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; 
     margin-top: 20px;
 }
-
+  
 .col {
     flex-basis: calc(33% - 15px);
     margin-bottom: 20px; 
 }
 
 .card {
+    border: 1px solid var(--dark-gray-color);
     border-radius: 5px;
-    background-color: var(--background-color);
-    height: 485px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
+    padding: 30px;
 }
 
 .card-body {
@@ -124,16 +110,9 @@ header {
     justify-content: space-between;
 }
 
-.card-body h3 {
+.card h3, .card h2, .card h1 {
     margin-top: 0;
-    text-align: center;
-    color: var(--secondary-color);
-}
-
-.card-body p {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 14px;
+    color: var(--primary-color);
 }
 
 .card-body button {
@@ -145,6 +124,7 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .card-body button a {
@@ -157,15 +137,23 @@ header {
     background-color: var(--secondary-color);
 }
 
+.card ul {
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 5px;
+}
+
 footer {
-    /* background-color: var(--background-color); */
+    background-color: var(--background-color);
     padding: 20px 0;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
 }
-  
+
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
