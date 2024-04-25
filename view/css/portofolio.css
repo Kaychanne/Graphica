@@ -169,7 +169,6 @@ textarea {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 75px;
 }
 
 .project {
@@ -198,8 +197,7 @@ textarea {
 footer {
     background-color: var(--background-color);
     padding: 20px 0;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
     left: 0;
     width: 100%;
 }

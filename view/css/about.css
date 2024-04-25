@@ -73,7 +73,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 82vh;
 }
 
 .container {
@@ -90,7 +90,7 @@ header {
 
 .right-column {
     position: absolute; 
-    top: 40%; 
+    top: 60%; 
     transform: translateY(-50%);
     right: 0; 
     width: 600px; 
@@ -101,8 +101,7 @@ header {
 footer {
     background-color: var(--background-color);
     padding: 20px 0;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
     left: 0;
     width: 100%;
 }
