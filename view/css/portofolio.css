@@ -62,10 +62,10 @@ header {
 
 .section{
     text-align: center; 
-    margin: 0 auto;
     background-color: var(--white-color) ;
     padding: 10px;
     margin: 0 100px;
+
 }
 
 .header1{
@@ -197,9 +197,10 @@ textarea {
 footer {
     background-color: var(--background-color);
     padding: 20px 0;
-    position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
+    position: absolute;
 }
   
 .footer-container {

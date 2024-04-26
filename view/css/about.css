@@ -59,21 +59,13 @@ header {
     vertical-align: middle; 
 }
 
-.foto{
-    left: 0;;
-    position: absolute;
-    top: 0;
-    margin-top: 150px;
-    width: 300px;
-    margin-left: 120px;
-    border-radius: 20px;
-}
 
 .section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 82vh;
+    text-align: center;
 }
 
 .container {
@@ -83,19 +75,15 @@ header {
     max-width: 1200px;
 }
 
-.left-column {
-    flex: 1;
-    text-align: center;
-}
-
-.right-column {
-    position: absolute; 
-    top: 60%; 
-    transform: translateY(-50%);
-    right: 0; 
-    width: 600px; 
-    margin-right: 200px;
-   
+.center-column {
+    padding: 20px 20px;
+    justify-content: space-between;
+    align-items:  center; 
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 footer {
@@ -104,6 +92,7 @@ footer {
     position: absolute;
     left: 0;
     width: 100%;
+    bottom: 0;
 }
   
 .footer-container {
