@@ -6,6 +6,7 @@
     <title>Order Now</title>
     <link rel="stylesheet" type="text/css" href="view/css/form.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,36 +25,37 @@
     <article>
         <div class="container">
             <h1>Order Sekarang </h1>
-            <form action="submit_order.php" method="POST">
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" required><br>
-
+            <form onsubmit="return onPesananSubmit(event)">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br>
+                
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required><br>
+                
+                <label for="notelp">Nomor Telepon:</label>
+                <input type="number" id="notelp" name="notelp" required><br>
 
-                <label for="telp">Nomor Telepon:</label>
-                <input type="text" id="telp" name="telp" required><br>
-
-                <label for="package">Pilih Layanan:</label>
-                <select id="package" name="package">
+                <label for="layanan">Pilih Layanan:</label>
+                <select id="layanan" name="layanan">
                     <option value="Basic">Desain Logo </option>
                     <option value="Medium">Desain UI/UX </option>
                     <option value="Premium">Desain Arsitektur Interior </option>
                 </select><br>
 
-                <label for="package">Pilih Paket:</label>
-                <select id="package" name="package">
+                <label for="paket">Pilih Paket:</label>
+                <select id="paket" name="paket">
                     <option value="Basic">Paket Basic </option>
                     <option value="Medium">Paket Medium </option>
                     <option value="Premium">Paket Premium </option>
                 </select><br>
 
-                <label for="message">Additional Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <label for="deskripsi">Additional Message:</label><br>
+                <textarea id="deskripsi" name="deskripsi" rows="4" cols="50"></textarea><br>
 
                 <input type="submit" value="Submit Order">
             </form>
         </div>
     </article>
+    <script src="view/javascript/submit.js"></script>
 </body>
 </html>
