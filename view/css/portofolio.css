@@ -65,6 +65,7 @@ header {
     background-color: var(--white-color) ;
     padding: 10px;
     margin: 0 100px;
+    min-height: 100vh;
 
 }
 
@@ -197,7 +198,6 @@ textarea {
 footer {
     background-color: var(--background-color);
     padding: 20px 0;
-    bottom: 0;
     left: 0;
     width: 100%;
     position: absolute;
