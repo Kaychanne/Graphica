@@ -84,6 +84,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="telp"],
+input[type="number"],
 select,
 textarea {
     padding: 10px;
