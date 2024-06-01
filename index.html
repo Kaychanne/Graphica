@@ -11,8 +11,10 @@
 <body>
     <header>
         <div class="navbar">
+          <div class="logo">
+            <img src="view/assets/logo.png" alt="logo">
+        </div>
             <ul>
-              <li><img src="view/assets/logo.png" alt="logo"></li>
               <li><a href="#">Home</a></li>
               <li><a href="artikel.html">Artikel</a></li>
               <li><a href="portofolio.html">Portofolio</a></li>
@@ -20,7 +22,10 @@
               <li><a href="about.html">Tentang Kami</a></li>
               <li><a href="#Contact">Kontak</a></li>
             </ul>
-        </div>
+            
+        </div><div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
     </div>
         <section class="second">
             <p class="slogan">Kreativitas <br> Layanan Terpercaya</p>
@@ -31,7 +36,7 @@
     </header>
     <article>
       <div class="section2">
-        <img src="view/assets/Rectangle 48.png"  style="height: 250px; margin: 20px;"> 
+        <img src="view/assets/Rectangle 48.png"  style="height: 250px; margin: 20px;" class="fotoo2"> 
         <div class="container">
           <p class="title">Dengan layanan kami, Anda akan menerima desain yang inovatif dan intuitif, dirancang dengan fokus pada pengalaman pengguna yang superior dan estetika yang menarik, memberikan solusi yang sesuai dengan kebutuhan dan tujuan bisnis Anda.</p>
         </div>
@@ -117,6 +122,11 @@
         </div>
       </footer>      
     </article>
+    <script>
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.navbar').classList.toggle('active');
+      });
+    </script>
     <script src="view/javascript/portofolio.js"></script>
 </body>
 </html>
