@@ -15,8 +15,8 @@
 }
 
 body {
-    font-family:'Heebo', sans-serif;
-    background-color: var(--white-color);
+    font-family: 'Heebo', sans-serif;
+    background-color: var(--background-color);
 }
 
 header {
@@ -24,12 +24,12 @@ header {
     color: var(--text-color);
     padding: 20px 20px;
     justify-content: space-between;
-    align-items:  center; 
+    align-items: center;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin: 0 100px;
     padding: 20px 0;
     align-items: center;
@@ -37,8 +37,6 @@ header {
 
 .navbar ul {
     list-style-type: none;
-    /* margin-left: 100px; */
-    /* align-items: center; */
 }
 
 .navbar ul li {
@@ -57,7 +55,7 @@ header {
 }
 
 .navbar ul li img {
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 
 .section2 {
@@ -148,21 +146,17 @@ header {
 footer {
     background-color: var(--background-color);
     padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
 }
-  
+
 .footer-section {
     text-align: center;
 }
-  
+
 .footer-section h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
@@ -185,4 +179,86 @@ footer {
   
 .social-links li a:hover {
     color:var(--secondary-color);
+}
+
+.menu-toggle {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    margin-right: 20px;
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        margin: 0 50px;
+    }
+
+    .section2 {
+        margin: 0 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar ul li {
+        margin-right: 30px;
+    }
+
+    .col {
+        flex-basis: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 20px;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin-top: -50px;
+    }
+
+    .navbar.active ul {
+        display: flex;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .section2 {
+        margin: 0 20px;
+    }
+
+    .col {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        margin: 0 10px;
+    }
+
+    .section2 {
+        margin: 0 10px;
+    }
+    
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin-top: -50px;
+    }
 }
