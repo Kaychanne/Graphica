@@ -9,19 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <header>
-            <div class="navbar">
-                <ul>
-                  <li><img src="view/assets/logo.png" alt="logo"></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="artikel.html">Artikel</a></li>
-                    <li><a href="portofolio.html">Portofolio</a></li>
-                    <li><a href="layanan.html">Layanan</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="#Contact">Kontak</a></li>
-                </ul>
-        </div>
-    </header>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="view/assets/logo.png" alt="logo">
+    </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="artikel.html">Artikel</a></li>
+          <li><a href="portofolio.html">Portofolio</a></li>
+          <li><a href="layanan.html">Layanan</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="#Contact">Kontak</a></li>
+        </ul>   
+    </div>
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
         <article>
           <div class="section2">
             <div class="container">
@@ -69,5 +76,10 @@
               </div>
             </div>
           </footer> 
+          <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+              document.querySelector('.navbar').classList.toggle('active');
+            });
+          </script>
 </body>
 </html>

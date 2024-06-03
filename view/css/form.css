@@ -109,3 +109,153 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: var(--secondary-color);
 }
+
+
+@media (max-width: 1200px) {
+    .navbar {
+        margin: 0 50px;
+    }
+
+    .second {
+        margin-left: 50px;
+    }
+
+    .foto {
+        margin-right: 50px;
+        width: 250px;
+    }
+
+    .section2 {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar ul li {
+        margin-right: 30px;
+    }
+
+    .column {
+        width: 45%;
+    }
+
+    .foto {
+        /* position: relative;
+        margin-right: 0;
+        width: 200px;
+        margin-top: 20px; */
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 20px;
+    }
+
+    .navbar ul {
+        margin-top: 30px;
+        display: none; 
+    }
+
+    .menu-toggle {
+        display: block; 
+        cursor: pointer;
+        margin-top: -50px;
+    }
+
+    .navbar.active ul {
+        display: block; 
+    }
+
+    .navbar ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .title{
+        font-size: 16px;
+    }
+    .second {
+        margin-left: 20px;
+        margin-top: -0.5px;
+        margin-bottom: -5px;
+    }
+    .fotoo2{
+        display: none;
+    }
+    .foto {
+        /* position: relative;
+        margin-right: 0;
+        width: 200px;
+        margin-top: 20px; */
+        display: none;
+    }
+
+    .section2 {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .card {
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        margin: 0 10px;
+    }
+
+    .second {
+        margin-left: 10px;
+    }
+
+    .section2 {
+        margin-left: 10px;
+    }
+
+    .foto {
+        width: 150px;
+    }
+
+    .slogan {
+        font-size: 36px;
+    }
+
+    .subtitle1 {
+        font-size: 28px;
+    }
+
+    .header1 {
+        font-size: 20px;
+    }
+
+    .start {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .card-body p {
+        font-size: 12px;
+    }
+
+    .card-body button {
+        font-size: 12px;
+    }
+
+    .detail button {
+        width: 150px;
+        font-size: 12px;
+    }
+}
+
