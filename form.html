@@ -12,16 +12,16 @@
 <body>
     <header>
         <div class="navbar">
-          <div class="logo">
-            <img src="view/assets/logo.png" alt="logo">
-        </div>
+            <div class="logo">
+                <img src="view/assets/logo.png" alt="logo">
+            </div>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="artikel.html">Artikel</a></li>
-              <li><a href="portofolio.html">Portofolio</a></li>
-              <li><a href="layanan.html">Layanan</a></li>
-              <li><a href="about.html">Tentang Kami</a></li>
-              <li><a href="#Contact">Kontak</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="#Contact">Kontak</a></li>
             </ul>   
         </div>
         <div class="menu-toggle">
@@ -30,8 +30,8 @@
     </header>
     <article>
         <div class="container">
-            <h1>Order Sekarang </h1>
-            <form onsubmit="return onPesananSubmit(event)">
+            <h1>Order Sekarang</h1>
+            <form id="orderForm" onsubmit="return onPesananSubmit(event)">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br>
                 
@@ -39,20 +39,20 @@
                 <input type="text" id="nama" name="nama" required><br>
                 
                 <label for="notelp">Nomor Telepon:</label>
-                <input type="text" id="notelp" name="notelp" required pattern="0[0-9],{9,}"><br>
+                <input type="text" id="notelp" name="notelp" required pattern="0[0-9]{9,}" ><br>
 
                 <label for="layanan">Pilih Layanan:</label>
                 <select id="layanan" name="layanan">
-                    <option value="Desain Logo">Desain Logo </option>
-                    <option value="Desain UI/UX">Desain UI/UX </option>
-                    <option value="Desain Arsitektur Interior">Desain Arsitektur Interior </option>
+                    <option value="Desain Logo">Desain Logo</option>
+                    <option value="Desain UI/UX">Desain UI/UX</option>
+                    <option value="Desain Arsitektur Interior">Desain Arsitektur Interior</option>
                 </select><br>
 
                 <label for="paket">Pilih Paket:</label>
                 <select id="paket" name="paket">
-                    <option value="Basic">Paket Basic </option>
-                    <option value="Medium">Paket Medium </option>
-                    <option value="Premium">Paket Premium </option>
+                    <option value="Basic">Paket Basic</option>
+                    <option value="Medium">Paket Medium</option>
+                    <option value="Premium">Paket Premium</option>
                 </select><br>
 
                 <label for="deskripsi">Additional Message:</label><br>
@@ -68,34 +68,40 @@
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.navbar').classList.toggle('active');
         });
+
         function onPesananSubmit(event) {
-        event.preventDefault(); 
+            event.preventDefault(); 
 
-        var submitBtn = document.getElementById('submitBtn');
-        submitBtn.disabled = true; 
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin loading-spinner"></i>';
+            var submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true; 
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin loading-spinner"></i>';
 
-        var formData = new FormData(event.target);
+            const final = Object.fromEntries(new FormData(event.target).entries());
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:3000/api/1234567890", // Ganti dengan URL endpoint server Anda
+                data: JSON.stringify(final),
+                contentType: "application/json",
+                success: function (data) {
+                    console.log("success: " + data.message);
+                    submitBtn.disabled = false; 
+                    submitBtn.innerHTML = 'Submit Order';
+                    alert('Order submitted successfully!');
+                    location.reload();
+                },
+                error: function (xhr, status, error) {
+                    let errorCode = xhr.status;
+                    let errorText = xhr.statusText;
+                    let errorMessage = `<span><strong>Error ${errorCode}</strong>: ${errorText}</span>`;
+                    console.log(errorMessage);
+                    submitBtn.disabled = false; 
+                    submitBtn.innerHTML = 'Submit Order';
+                    alert('Order submission failed!');
+                },
+            });
 
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'your-server-endpoint-here', true); 
-
-        xhr.onload = function () {
-            submitBtn.disabled = false; 
-            submitBtn.innerHTML = 'Submit Order'; 
-
-            if (xhr.status === 200) {
-                alert('Order submitted successfully!');
-            } else {
-                alert('Order submission failed!');
-            }
-        };
-
-        xhr.send(formData);
-    }
-
+            return false;
+        }
     </script>
-    <script src="view/javascript/submit.js"></script>
-    <script src="view/javascript/submit3.js"></script>
 </body>
 </html>
