@@ -68,25 +68,24 @@
         });
 
     document.getElementById('orderForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah form dari submit default
+    event.preventDefault();
 
     var loadingElement = document.getElementById('loading');
-    loadingElement.style.display = 'block'; // Tampilkan elemen loading
+    loadingElement.style.display = 'block'; 
 
     var formData = new FormData(this);
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'your-server-endpoint-here', true); // Ganti 'your-server-endpoint-here' dengan endpoint server Anda
+    xhr.open('POST', 'your-server-endpoint-here', true); 
 
     xhr.onload = function () {
         if (xhr.status === 200) {
-            // Berhasil, Anda bisa menambahkan logika setelah submit berhasil di sini
+            
             alert('Order submitted successfully!');
         } else {
-            // Gagal, Anda bisa menambahkan logika jika submit gagal di sini
             alert('Order submission failed!');
         }
-        loadingElement.style.display = 'none'; // Sembunyikan elemen loading setelah selesai
+        loadingElement.style.display = 'none'; 
     };
 
     xhr.send(formData);
