@@ -168,3 +168,11 @@ form input[type="submit"]:hover {
         margin: 150px auto;
     }
 }
+
+.loading {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+}

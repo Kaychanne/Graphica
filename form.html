@@ -57,15 +57,43 @@
                 <label for="deskripsi">Additional Message:</label><br>
                 <textarea id="deskripsi" name="deskripsi" rows="4" cols="50"></textarea><br>
 
-                <input type="submit" value="Submit Order">
+                <input type="submit" value="Submit Order"> 
             </form>
+            <div id="loading" class="loading">Loading...</div>
         </div>
     </article>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
           document.querySelector('.navbar').classList.toggle('active');
         });
+
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah form dari submit default
+
+    var loadingElement = document.getElementById('loading');
+    loadingElement.style.display = 'block'; // Tampilkan elemen loading
+
+    var formData = new FormData(this);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'your-server-endpoint-here', true); // Ganti 'your-server-endpoint-here' dengan endpoint server Anda
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            // Berhasil, Anda bisa menambahkan logika setelah submit berhasil di sini
+            alert('Order submitted successfully!');
+        } else {
+            // Gagal, Anda bisa menambahkan logika jika submit gagal di sini
+            alert('Order submission failed!');
+        }
+        loadingElement.style.display = 'none'; // Sembunyikan elemen loading setelah selesai
+    };
+
+    xhr.send(formData);
+});
+
       </script>
     <script src="view/javascript/submit.js"></script>
+    <script src="view/javascript/submit3.js"></script>
 </body>
 </html>
