@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="view/css/form.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -57,40 +58,43 @@
                 <label for="deskripsi">Additional Message:</label><br>
                 <textarea id="deskripsi" name="deskripsi" rows="4" cols="50"></textarea><br>
 
-                <input type="submit" value="Submit Order"> 
+                <button type="submit" id="submitBtn">
+                    Submit Order
+                </button>
             </form>
         </div>
     </article>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
-          document.querySelector('.navbar').classList.toggle('active');
+            document.querySelector('.navbar').classList.toggle('active');
         });
+        function onPesananSubmit(event) {
+        event.preventDefault(); 
 
-    document.getElementById('orderForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+        var submitBtn = document.getElementById('submitBtn');
+        submitBtn.disabled = true; 
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin loading-spinner"></i>';
 
-    var loadingElement = document.getElementById('loading');
-    loadingElement.style.display = 'block'; 
+        var formData = new FormData(event.target);
 
-    var formData = new FormData(this);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'your-server-endpoint-here', true); 
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'your-server-endpoint-here', true); 
+        xhr.onload = function () {
+            submitBtn.disabled = false; 
+            submitBtn.innerHTML = 'Submit Order'; 
 
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            
-            alert('Order submitted successfully!');
-        } else {
-            alert('Order submission failed!');
-        }
-        loadingElement.style.display = 'none'; 
-    };
+            if (xhr.status === 200) {
+                alert('Order submitted successfully!');
+            } else {
+                alert('Order submission failed!');
+            }
+        };
 
-    xhr.send(formData);
-});
+        xhr.send(formData);
+    }
 
-      </script>
+    </script>
     <script src="view/javascript/submit.js"></script>
     <script src="view/javascript/submit3.js"></script>
 </body>
